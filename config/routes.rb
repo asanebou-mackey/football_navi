@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/index'
   root 'homes#index'
   devise_for :users
   # get 'homes/index' をルートパス root 'homes#index' に変更
