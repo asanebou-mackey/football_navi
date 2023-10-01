@@ -1,25 +1,25 @@
-<div class="container border border-dark mt-5">
+<div class="container border border-secondary mt-5 border-3 rounded-3">
   <div class="row pt-1 pb-2 border-bottom border-dark">
-    <div class="col-lg-4 col-4">
+    <div class="col-lg-4 col-12">
       <p class="pt-3">ユーザー名</p>
     </div>
-    <div class="col-lg-8 col-8">
+    <div class="col-lg-8 col-12">
       <p class="pt-3"><%= current_user.name %></p>
     </div>
   </div>
   <div class="row pt-1 pb-2 border-bottom border-dark">
-    <div class="col-lg-4 col-4">
-      <p class="pt-3" style="white-space: nowrap;">メールアドレス</p>
+    <div class="col-lg-4 col-12">
+        <p class="pt-3" style="white-space: nowrap;">メールアドレス</p>
     </div>
-    <div class="col-lg-8 col-8">
-      <p class="pt-3"><%= current_user.email %></p>
+    <div class="col-lg-8 col-12">
+        <p class="pt-3"><%= current_user.email %></p>
     </div>
   </div>
   <div class="row pt-1 pb-2 border-bottom border-dark">
-    <div class="col-lg-4 col-4">
+    <div class="col-lg-4 col-12">
       <p class="pt-3">自己紹介 <span style="white-space: nowrap;">(250文字以内)</span></p>
     </div>
-    <div class="col-lg-8 col-8">
+    <div class="col-lg-8 col-12">
       <p class="pt-3"><%= current_user.introduction %></p>
     </div>
   </div>
@@ -28,4 +28,4 @@
       <p class="bg-dark py-2">編集する</p>
     <% end %>
   </div>
-</div
+</div>
