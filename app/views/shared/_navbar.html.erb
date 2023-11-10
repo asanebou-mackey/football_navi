@@ -1,13 +1,13 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Footballnavi</a>
+    <%= link_to "Footballnavi", root_path, class: "navbar-brand" %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">投稿一覧</a>
+          <%= link_to "投稿一覧", fields_index_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">ユーザー一覧</a>
@@ -27,7 +27,8 @@
           <% if user_signed_in? %>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= current_user.name %>さん<i class="far fa-user-circle"></i></a>
-            <ul class="dropdown-menu dropdown-menu-end">   
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><%= link_to "コート登録", new_field_path, class: "dropdown-item" %></li>
               <li><%= link_to "設定", users_index_path, class: "dropdown-item" %></li> 
               <li><%= button_to "ログアウト", destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
               <li><%= button_to "アカウント削除", registration_path(resource_name), data: { confirm: "アカウントを削除してもよろしいですか?", turbo_confirm: "アカウントを削除してもよろしいですか?" }, method: :delete, class: "dropdown-item" %></li>

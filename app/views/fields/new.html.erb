@@ -1,0 +1,32 @@
+<div class="container text-center border border-secondary mt-5 border-3 rounded-3 mb-5">
+  <div class="row">
+    <h2 class="py-5">コート情報登録</h2>
+  </div>
+
+  <%= form_with model: @field do |f| %>
+    <div class="field py-3">
+      <%= f.label :name, "コート名" %><br />
+      <%= f.text_field :name, autofocus: true, placeholder: "コート名" %>
+    </div>
+    <div class="field py-3">
+      <%= f.label :address, "住所" %><br />
+      <%= f.text_field :address, autofocus: true, placeholder: "住所" %>
+    </div>
+    <div class="field py-3">
+      <%= f.label :number, "電話番号" %><br />
+      <%= f.telephone_field :number, autofocus: true, placeholder: "電話番号" %>
+    </div>
+    <div class="field py-3">
+      <%= f.label :price, "料金(1日)" %><br />
+      <%= f.text_field :price, autofocus: true, placeholder: "料金" %>
+    </div>
+    <div class="field py-3">
+      <%= f.label :introduce, "紹介文" %><br />
+      <%= f.text_field :introduce, autofocus: true, placeholder: "紹介文" %>
+    </div>
+
+    <div class="actions py-3">
+      <%= f.submit "登録する", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
