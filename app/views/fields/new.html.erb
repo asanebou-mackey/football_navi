@@ -2,6 +2,7 @@
   <div class="row">
     <h2 class="py-5">コート情報登録</h2>
   </div>
+  <%= render "devise/shared/error_field_messages", obj: @field %>
 
   <%= form_with model: @field do |f| %>
     <div class="field py-3">
