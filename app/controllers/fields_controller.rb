@@ -17,8 +17,12 @@ class FieldsController < ApplicationController
     end
   end
 
+  def show
+    @field = Field.find(params[:id])
+  end
+
   private
     def field_params
-      params.require(:field).permit(:name, :address, :number, :price, :introduce).merge(user_id: current_user.id)
+      params.require(:field).permit(:name, :address, :number, :price, :introduce, :image).merge(user_id: current_user.id)
     end
 end

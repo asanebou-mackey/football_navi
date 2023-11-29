@@ -6,6 +6,10 @@
 
   <%= form_with model: @field do |f| %>
     <div class="field py-3">
+      <%= f.label :image, "コート画像" %><br />
+      <%= f.file_field :image %>
+    </div>
+    <div class="field py-3">
       <%= f.label :name, "コート名" %><br />
       <%= f.text_field :name, autofocus: true, placeholder: "コート名" %>
     </div>
