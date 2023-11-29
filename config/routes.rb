@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'fields/index'
   resources :fields
   get 'users/index'
   root 'homes#index'
