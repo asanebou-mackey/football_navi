@@ -1,2 +1,16 @@
-<h1>Fields#index</h1>
-<p>Find me in app/views/fields/index.html.erb</p>
+<h1 class="text-center py-5">フットサルコート一覧</h1>
+<div class="container">
+  <div class="row">
+    <% @fields.each do |field| %>
+      <div class="col-lg-3">
+        <div class="card">
+          <%= image_tag field.image if field.image.attached? %>
+          <div class="card-body">
+            <h5 class="card-title"><%= field.name %></h5>
+            <p class="card-text"><%= field.introduce %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
