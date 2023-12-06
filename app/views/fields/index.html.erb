@@ -3,13 +3,19 @@
   <div class="row">
     <% @fields.each do |field| %>
       <div class="col-lg-3">
+        <%= link_to field_path(field.id), class: "text-decoration-none link-dark" do %>
         <div class="card">
-          <%= image_tag field.image if field.image.attached? %>
-          <div class="card-body">
+          <% if field.image.attached? %>
+            <%= image_tag field.image, class: "field_image_size" %>
+          <% else %>
+            <%= image_tag "soccer_field.png", class: "field_image_size" %>
+          <% end %>
+          <div class="card-body overflow-auto">
             <h5 class="card-title"><%= field.name %></h5>
             <p class="card-text"><%= field.introduce %></p>
           </div>
         </div>
+        <% end %>
       </div>
     <% end %>
   </div>
