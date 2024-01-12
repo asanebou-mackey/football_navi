@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :fields
+  resources :reservations
   get 'users/index'
   root 'homes#index'
   devise_for :users
